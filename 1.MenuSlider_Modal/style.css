@@ -1,0 +1,117 @@
+
+* {
+    box-sizing: border-box;
+    margin : 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.5rem;
+    background-color: #0BBAD9;
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+.sidebar-menu {
+    position: absolute;
+    height: 100%;
+    width: 0;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #0bd9b791;
+    border: 1px solid rgba(255, 255, 255, 0.534);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar-menu a {
+    position: relative;
+    text-decoration: none;
+    left: 1rem;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.sidebar-menu a:hover {
+    color: rgba(255, 255, 255, 0.658);
+}
+
+.sidebar-menu li {
+    margin: 2rem;
+    list-style-type: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.534);
+}
+#sidebar-menu-btn {
+    position: absolute;
+    margin-left: 0;
+    margin-bottom: 0.5rem;
+    left: 2rem;
+    color: #fff;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-welcome-typing {
+    font-family: 'Big Shoulders Stencil Display';
+    color: #000;
+    text-align: center;
+    font-size: 4.5rem;
+    font-weight: 800;
+}
+
+#container-tech-title {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.container-tech-stack {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+.container-tech-stack img{
+    width: 40%;
+    height: 2.5rem;
+}
+
+.container-describe {
+    margin : 1.5rem 3rem;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: left;
+    width: 70%;
+}
+/* Text */
+h1 {
+    font-size: 4.5rem;
+}
+h2 {
+    font-size: 4.0rem;
+}
+h3 {
+    font-size: 3rem;
+}
+h4 {
+    font-size: 2.8rem;
+}
