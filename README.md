@@ -10,7 +10,7 @@
 ## 🌈10가지 프로젝트🌈
 |Project|Live Demo|
 :----|:----:
-|1. Menu Slider & Modal||
+|1. Menu Slider & Modal|[Live Demo](https://younyikim.github.io/10-sideWebProject/1.MenuSlider_Modal/index.html)|
 |2. Meal Finder||
 |3. Expense Tracker||
 |4. Music Player||
