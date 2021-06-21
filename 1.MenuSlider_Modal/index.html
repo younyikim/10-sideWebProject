@@ -7,10 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@500&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
     <title>Menu & Modal</title>
 </head>
 
@@ -26,29 +29,90 @@
                 <li><a href="#" class="sidebar-menu-link">Blog</a></li>
             </ul>
         </div>
-        <div class="container">
-            <p class="container-welcome-typing">
-            <h1>Hello World! <br>I'm Student Front-End Developer younyi Kim</h1>
-            </p>
-            <h3 id="container-tech-title">Tech Stack</h3>
-            <p class="container-tech-stack">
-                <img src="https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white" /></a>
-                <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white" /></a>
-                <img
-                    src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white" /></a>
-                <img src="https://img.shields.io/badge/Java-007396?style=flat-square&logo=Java&logoColor=white" /></a>
-                <img
-                    src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=SQLite&logoColor=white" /></a>
-            </p>
-            <h4>About Me</h4>
-            <p class="container-describe">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet illum necessitatibus pariatur! Est
-                reiciendis magnam molestias itaque! Perferendis corrupti eaque minima, saepe modi tempore ullam numquam,
-                totam amet harum et?
-            </p>
+        <div class="image-profile">
+            <div class="image-profile-background">
+                <img src="./image/side_image.jpg" alt="" width="80%">
+            </div>
+        </div>
+        <div class="showcase">
+            <!-- 자기소개 -->
+            <div class="showcase-about">
+                <div class="showcase-about-1-content">
+                    <p class="text-xl">Hello, I'm Younyi.</p>
+                </div>
+                <div class="showcase-about-2-content">
+                    <p class="text-lg">Student Web front-end Developer based in Seoul, South Korea. I'm interest in
+                        interactive web and cross browsing.</p>
+                    <!-- 포트폴리오 modal 버튼 -->
+                    <button class="btn btn-rounded btn-xl" id="showcase-portfolio-btn">My Project</button>
+                </div>
+            </div>
+            <!-- Skill -->
+            <div class="showcase-skill">
+                <p class="skill-name">HTML</p>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 80%"
+                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <p class="skill-name">CSS</p>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 75%"
+                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <p class="skill-name">JavaScript</p>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 75%"
+                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <p class="skill-name">Java</p>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 70%"
+                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <p class="skill-name">SQLite</p>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%"
+                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+            <!-- portfolio modal -->
+            <div class="showcase-modal" id="showcase-portfo">
+                <!-- portfolio modal - content -->
+                <div class="showcase-modal-content">
+                    <span class="showcase-modal-close">&times;</span>
+                    <div class="showcase-modal-background">
+                        <img src="./image/quiz_greeting.png" alt="">
+                    </div>
+
+                    <p class="text-xl">Quiz Application</p>
+                    <p class="text-md">You can solve Quiz about Korea in this quiz app! <br>This project didn't use
+                        Database, but use localStorage to remember the participant and their rank and score.</p>
+                    <ul>
+                        <li><a href="#" class="showcase-modal-category">#HTML</a></li>
+                        <li><a href="#" class="showcase-modal-category">#CSS</a></li>
+                        <li><a href="#" class="showcase-modal-category">#Vanilla JavaScript</a></li>
+                    </ul>
+                    <a href="https://younyikim.github.io/Quiz-App/html/index.html" class="btn btn-rounded btn-xl"
+                        id="showcase-portfolio-btn">Live Demo</a>
+                    <a href="https://github.com/younyikim/Quiz-App" class="btn btn-rounded btn-xl"
+                        id="showcase-code-btn">Code</a>
+                </div>
+            </div>
+        </div>
         </div>
     </section>
     <script src="script.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
