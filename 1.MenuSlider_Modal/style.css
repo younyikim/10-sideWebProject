@@ -23,6 +23,7 @@ header {
     padding: 16px;
 }
 
+/* sidebar menu */
 .sidebar-menu {
     position: absolute;
     height: 100vh;
@@ -53,8 +54,8 @@ header {
 .sidebar-menu li {
     margin: 1rem;
     list-style-type: none;
-    /* border-bottom: 1px solid rgba(255, 255, 255, 0.534); */
 }
+
 #sidebar-menu-btn {
     position: absolute;
     margin-left: 0;
@@ -68,9 +69,9 @@ header {
 /* showcase */
 .showcase {
     width: 100%;
-    height: 65vh;
+    height: 70vh;
     position: relative;
-    background-image: linear-gradient(183deg, var(--primary-color) 90%, #fff 10%);
+    background-image: linear-gradient(184deg, var(--primary-color) 90%, #fff 10%);
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1rem;
@@ -78,16 +79,16 @@ header {
     justify-content: center;
 }
 
+/* image profile */
 .image-profile {
-    /* border: 1px solid white; */
-    height: 30vh;
+    height: 23vh;
     background-color: var(--primary-color);
 }
 
 .image-profile-background {
     float: right;
-    width: 20rem;
-    height: 28vh;
+    width: 15rem;
+    height: 23vh;
     border-radius: 50%;
     margin-right: 6rem;
     background-color: rgba(0, 0, 0, 0.349);
@@ -97,10 +98,11 @@ header {
     float: right;
     margin-right: 1rem;
     height: 99%;
-    width: 20rem;
+    width: 15rem;
     border-radius: 50%;
 }
 
+/* showcase message content */
 .showcase-about > div {
     padding: 1rem;
     margin-left: 1.5rem;
@@ -108,29 +110,30 @@ header {
 
 .showcase-about {
     color: #fff;
-    margin-bottom: 10rem;
+    margin-bottom: 6rem;
 }
 
 .showcase-about-1-content {
     font-weight: 800;
 }
 
-.showcase-skill {
-    color: #fff;
-    border-radius: 3px;
-    margin-right: 1rem;
-    padding: 1rem;
-    /* margin-bottom: 80rem; */
-}
-
-#showcase-portfolio-btn, #showcase-code-btn {
-    margin-left: 5rem;
+#showcase-portfolio-btn {
     padding: 1rem;
     font-size: 1.8rem;
     font-weight: 500;
     border-radius: 10px;
     width: 11rem;
+    float: right;
     background-color: var(--concept-color);
+}
+
+/* showcase skill progress bar */
+.showcase-skill {
+    color: #fff;
+    border-radius: 3px;
+    margin-right: 1rem;
+    padding: 1rem;
+    margin-bottom: 5rem;
 }
 
 .progress {
@@ -142,6 +145,7 @@ header {
     margin-left: 1rem;
 }
 
+/* showcase modal */
 .showcase-modal {
     display: none;
     position: fixed;
@@ -157,7 +161,6 @@ header {
 .showcase-modal-content {
     margin: 5% auto;
     background-color: #fefefe;
-    /* margin:2rem 8rem; */
     border: 1px solid #888;
     width: 70%;
     height: 90%;
@@ -220,6 +223,15 @@ header {
     border-bottom: 2px solid #000;
 }
 
+#showcase-modal-portfolio-btn, #showcase-modal-code-btn {
+    padding: 1rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    border-radius: 10px;
+    width: 11rem;
+    background-color: var(--concept-color);
+}
+
 /* Text */
 h1 {
     font-size: 4.5rem;
@@ -272,3 +284,145 @@ h4 {
 .btn-rounded {
     border-radius: 5px;
 }
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+    .showcase {
+        height: 85vh;
+        background-image: linear-gradient(189deg, var(--primary-color) 90%, #fff 10%);
+        grid-template-columns: 1fr;
+    }
+
+    /* image profile */
+    .image-profile {
+        height: 20vh;
+    }
+
+    .image-profile-background {
+        display: inline-block;
+        width: 13rem;
+        height: 20vh;
+        margin-right: 9rem;
+    }
+
+    .image-profile img{
+        display: inline-block;
+        text-align: center;
+    }
+
+    /* showcase message content */
+    .showcase-about {
+        margin-bottom: 1rem;
+    }
+
+    .showcase-about > div {
+        padding: 1rem;
+        margin-left: 1.5rem;
+    }
+
+    /* showcase skill progress bar */
+    .progress {
+        width: 80%;
+        margin: 0.8rem;
+    }
+
+    .showcase-skill {
+        margin-left: 2rem;
+    }
+    .showcase-skill > p {
+        margin-left: 1rem;
+    }
+
+    /* showcase modal */
+    .showcase-modal-content {
+        width: 90%;
+    }
+    
+    .showcase-modal-content > p {
+        padding: 0.8rem;
+    }
+    .showcase-modal-content img{
+       width: 93%;
+    }
+    
+    .showcase-modal-content li > a{
+        font-size: 1.2rem;
+    }
+    
+    #showcase-modal-portfolio-btn, #showcase-modal-code-btn {
+        font-size: 1.5rem;
+    }
+
+    /* Text Style */
+    .text-xl {
+        font-size: 2.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .text-lg {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .text-md {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .showcase {
+        width: 100%;
+        height: 74vh;
+        background-image: linear-gradient(189deg, var(--primary-color) 90%, #fff 10%);
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* image profile */
+    .image-profile {
+        height: 23vh;
+    }
+
+    .image-profile-background {
+        width: 14rem;
+        height: 23vh;
+        margin-right: 3rem;
+    }
+
+    /* showcase modal */
+    .showcase-modal-content {
+        width: 80%;
+    }
+
+    /* showcase skill progress bar */
+    .progress {
+        width: 90%;
+    }
+
+    .showcase-skill {
+        margin-left: 1rem;
+    }
+
+    /* Text Style */
+    .text-xl {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .text-lg {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .text-md {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+ }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {  }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  }
