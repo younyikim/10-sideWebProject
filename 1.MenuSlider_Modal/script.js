@@ -1,5 +1,15 @@
+const mediaQuery = window.matchMedia('(min-width: 320px) and (max-width: 480px)');
 let btnSideBarMenu = document.getElementById("sidebar-menu-btn");
-btnSideBarMenu.addEventListener("click", openSideBarMenu);
+let btnSideBarCancle = document.querySelector(".sidebar-menu-close-btn");
+
+btnSideBarMenu.addEventListener("click", function () {
+    if (mediaQuery.matches) {
+        openSideBarMenuByMeidaQuery();
+    } else {
+        openSideBarMenu();
+    }
+});
+btnSideBarCancle.addEventListener("click", closeSideBarMenu);
 
 let modal = document.querySelector(".showcase-modal");
 let modalClose = document.querySelector(".showcase-modal-close");
@@ -32,11 +42,24 @@ function openSideBarMenu() {
         document.querySelector("section").style.marginLeft = "200px";
         isSideBarCliked = false;
     } else {
-        document.querySelector(".sidebar-menu").style.width = "0";
-        document.querySelector("header").style.marginLeft = "0";
-        document.querySelector("#sidebar-menu-btn").style.marginLeft = "0";
-        document.querySelector("section").style.marginLeft = "0";
         isSideBarCliked = true;
+        closeSideBarMenu();
     }
+}
 
+function openSideBarMenuByMeidaQuery() {
+    if (isSideBarCliked) {
+        document.querySelector(".sidebar-menu").style.width = "100%";
+        isSideBarCliked = false;
+    } else {
+        isSideBarCliked = true;
+        closeSideBarMenu();
+    }
+}
+
+function closeSideBarMenu() {
+    document.querySelector(".sidebar-menu").style.width = "0";
+    document.querySelector("header").style.marginLeft = "0";
+    document.querySelector("#sidebar-menu-btn").style.marginLeft = "0";
+    document.querySelector("section").style.marginLeft = "0";
 }
