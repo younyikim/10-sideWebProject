@@ -23,3 +23,9 @@
 
 ----------------------------------------------------               
 ## 1. Menu Slider & Modal
+
+퀴즈 로그인 화면            |  로그인 이후 화면
+:-------------------------:|:-------------------------:
+<img src="/image/menu_modal_main.PNG"> |<img src="/image/menu_modal_main_side.PNG">
+퀴즈 풀이 화면     |  결과 화면
+<img src="/image/menu_modal_modal.PNG"> | <img src="/image/menu_modal_main_media.PNG">
