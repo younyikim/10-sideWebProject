@@ -22,10 +22,14 @@
 |10. Sortable List||
 
 ----------------------------------------------------               
-## 1. Menu Slider & Modal
+## 1. Menu Slider & Modal            
+* Landing Page 제작 및 디자인
+* Side Menu와 Modal 스타일
+* 버튼 클릭을 사용하여 Menu와 Modal open/close 동작 지정
+* Media query 사용하여 반응형 웹 지원
 
-퀴즈 로그인 화면            |  로그인 이후 화면
+menu slider,modal main page           |  menu slider
 :-------------------------:|:-------------------------:
-<img src="/image/menu_modal_main.PNG"> |<img src="/image/menu_modal_main_side.PNG">
-퀴즈 풀이 화면     |  결과 화면
-<img src="/image/menu_modal_modal.PNG"> | <img src="/image/menu_modal_main_media.PNG">
+<img src="/1.MenuSlider_Modal/image/menu_modal_main.PNG"> |<img src="/1.MenuSlider_Modal/image/menu_modal_main_side.PNG">
+modal     |  main page use media query(320px to 479px)
+<img src="/1.MenuSlider_Modal/image/menu_modal_modal.PNG"> | <img src="/1.MenuSlider_Modal/image/menu_modal_main_media.PNG" height="400px">
