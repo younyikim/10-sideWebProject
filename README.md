@@ -32,4 +32,17 @@ menu slider,modal main page           |  menu slider
 :-------------------------:|:-------------------------:
 <img src="/1.MenuSlider_Modal/image/menu_modal_main.PNG"> |<img src="/1.MenuSlider_Modal/image/menu_modal_main_side.PNG">
 modal     |  main page use media query(320px to 479px)
-<img src="/1.MenuSlider_Modal/image/menu_modal_modal.PNG"> | <img src="/1.MenuSlider_Modal/image/menu_modal_main_media.PNG" height="400px">
+<img src="/1.MenuSlider_Modal/image/menu_modal_modal.PNG"> | <img src="/1.MenuSlider_Modal/image/menu_modal_main_media.PNG" height="400px">   
+
+----------------------------------------------------           
+## 2. Meal Finder
+* [themealdb.com](https://www.themealdb.com/) API를 사용하여 음식들을 검색한다.
+* 검색한 음식들의 이미지와 정보를 DOM에 표시한다.
+* 이미지를 클릭하면 상세 정보(레시피, 재료 등)을 DOM에 표시
+* 키워드로 검색, 랜덤 검색 기능
+
+meal finder main           |  seach
+:-------------------------:|:-------------------------:
+<img src="/1.MenuSlider_Modal/image/menu_modal_main.PNG"> |<img src="/1.MenuSlider_Modal/image/menu_modal_main_side.PNG">
+random search   |  detail information
+<img src="/1.MenuSlider_Modal/image/menu_modal_modal.PNG"> | <img src="/1.MenuSlider_Modal/image/menu_modal_main_media.PNG" height="400px"> 
