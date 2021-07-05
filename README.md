@@ -11,7 +11,7 @@
 |Project|Live Demo|
 :----|:----:
 |1. Menu Slider & Modal|[Live Demo](https://younyikim.github.io/10-sideWebProject/1.MenuSlider_Modal/index.html)|
-|2. Meal Finder||
+|2. Meal Finder|[Live Demo](https://younyikim.github.io/10-sideWebProject/2.Meal_Finder/index.html)|
 |3. Expense Tracker||
 |4. Music Player||
 |5. Infinite Scroll||
