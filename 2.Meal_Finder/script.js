@@ -3,7 +3,7 @@ const searchBtn = document.getElementById("search-btn");
 const randomSearchBtn = document.getElementById("random-search-btn");
 const resultHead = document.getElementById("result-head");
 const resultMeals = document.getElementById("result-meals");
-const resultName = document.querySelector(".result-name");
+const resultName = document.querySelector(".meal-info");
 const resultImg = document.getElementById("result-img");
 const resultMealDetail = document.getElementById("result-meal-detail");
 
@@ -22,14 +22,14 @@ function searchMeal(event) {
                 console.log(data);
 
                 resultHead.innerHTML = `Search results for '${keyword}' :`;
-
+                resultMealDetail.innerHTML = '';
                 if (data.meals === null) {
                     resultHead.innerHTML = `There are no search results. Try again!`;
                 } else {
                     resultMeals.innerHTML = data.meals.map(
                         meal => `<div class="meal">
                                     <img src="${meal.strMealThumb}" alt="${meal.strMeal}" width="100%"/>
-                                    <div class="result-name" data-mealId=${meal.idMeal}><p>${meal.strMeal}</p></div>
+                                    <div class="meal-info" data-mealId=${meal.idMeal}><p>${meal.strMeal}</p></div>
                                 </div>`
                     ).join('');
                 }
@@ -41,6 +41,16 @@ function searchMeal(event) {
 //Find meal by Id
 function findMealById(mealId) {
     fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`)
+        .then((response) => response.json())
+        .then((data) => {
+            showMealDetail(data.meals[0]);
+        });
+}
+
+// Find random Meal
+function findMealByRandom(event) {
+    event.preventDefault();
+    fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
         .then((response) => response.json())
         .then((data) => {
             showMealDetail(data.meals[0]);
@@ -62,7 +72,8 @@ function showMealDetail(data) {
     }
 
     resultHead.innerHTML = '';
-    resultMeals.innerHTML = `<div class="meal-detail">
+    resultMeals.innerHTML = '';
+    resultMealDetail.innerHTML = `<div class="meal-detail">
                         <h2>${data.strMeal}</h2>
                         <img src="${data.strMealThumb}" alt="${data.strMeal}" width="40%"/>
                         <div class="detail-area-category" data-mealId=${data.idMeal}>
@@ -79,15 +90,15 @@ function showMealDetail(data) {
                     </div>`;
 }
 
-
 //eventListener
 searchBtn.addEventListener("click", searchMeal);
+randomSearchBtn.addEventListener("click", findMealByRandom);
 
-
+// 검색 결과의 이미지를 클릭하는 경우
 resultMeals.addEventListener("click", event => {
     const mealInfo = event.path.find(item => {
         if (item.classList) {
-            return item.classList.contains('result-name');
+            return item.classList.contains('meal-info');
         } else {
             return false;
         }
