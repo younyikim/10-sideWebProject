@@ -41,8 +41,9 @@ modal     |  main page use media query(320px to 479px)
 * 이미지를 클릭하면 상세 정보(레시피, 재료 등)을 DOM에 표시
 * 키워드로 검색, 랜덤 검색 기능
 
-meal finder main           |  seach
+meal finder main           |  search
 :-------------------------:|:-------------------------:
-<img src="/1.MenuSlider_Modal/image/menu_modal_main.PNG"> |<img src="/1.MenuSlider_Modal/image/menu_modal_main_side.PNG">
-random search   |  detail information
-<img src="/1.MenuSlider_Modal/image/menu_modal_modal.PNG"> | <img src="/1.MenuSlider_Modal/image/menu_modal_main_media.PNG" height="400px"> 
+<img src="/2.Meal_Finder/image/meal_finder_main.PNG"> |<img src="/2.Meal_Finder/image/meal_finder_search.PNG">
+random search   | 
+<img src="/2.Meal_Finder/image/meal_finder_detail.PNG"> | 
+
