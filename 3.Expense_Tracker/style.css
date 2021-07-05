@@ -1,0 +1,150 @@
+:root {
+    --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+* {
+    box-sizing: border-box;
+    margin : 0;
+    padding: 0;
+}
+
+.wrap {
+    background-color: #f7f7f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header {
+    margin-top: 0.8rem;
+}
+.container {
+    padding: 4rem;
+    width: 500px;
+}
+
+
+#total-balance {
+    font-size: 2.2rem;
+    font-weight: 550;
+    margin-bottom: 0.8rem;
+}
+
+.content-inc-exp-trace {
+    display: flex;
+    justify-content: space-between;
+    align-self: stretch;
+    margin: 20px 0;
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+}
+
+.content-inc-exp-trace > div {
+    flex: 1;
+    text-align: center;
+}
+
+.content-inc-exp-trace > div:first-of-type {
+    border-right: 1px solid #dedede;
+}
+
+.trace {
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin: 5px 0;
+}
+
+.trace.plus {
+    color: #2ecc71;
+  }
+  
+.trace.minus {
+    color: #c0392b;
+}
+
+.content-history {
+    margin-bottom: 2rem;
+}
+
+.history {
+    list-style-type: none;
+}
+
+.history li {
+    border: 1px solid #bbb;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    box-shadow: var(--box-shadow);
+}
+
+.history li.plus {
+    border-right: 5px solid #2ecc71;
+}
+
+.history li.minus {
+    border-right: 5px solid #c0392b;
+}
+
+.delete-btn {
+    cursor: pointer;
+    background-color: #e74c3c;
+    border: 0;
+    font-size: 20px;
+    padding: 2px 5px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    /* translate(length, percentage) */
+    transform: translate(-100%, -50%); 
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.history li:hover .delete-btn {
+    opacity: 1;
+}
+
+input {
+    border: 1px solid #dedede;
+    padding: 10px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 27em;
+    height: 2.3rem;
+}
+
+#add-btn {
+    cursor: pointer;
+    width: 27em;
+    height: 2.3rem;
+    margin-top: 0.8rem;
+    border: none;
+    background-color: #9c88ff;
+    color: #fff;
+}
+
+/* Heading */
+h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+h3 {
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 10px;
+}
+
+h4 {
+    font-size: 0.9rem;
+    margin: 0.5rem;
+}
