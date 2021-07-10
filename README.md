@@ -47,3 +47,17 @@ meal finder main           |  search
 random search   | 
 <img src="/2.Meal_Finder/image/meal_finder_detail.PNG"> | 
 
+----------------------------------------------------           
+## 3. Expense Tracker      
+* localStorage 에 데이터 저장
+* transaction을 DOM에 출력
+* 총 금액(balance), 수입(income), 지출(expense)를 표시
+* transaction 추가 및 삭제
+                
+expense tracker main       |  transaction add
+:-------------------------:|:-------------------------:
+<img src="/3.Expense_Tracker/image/expense_main.PNG"> |<img src="/3.Expense_Tracker/image/expense_add.PNG">
+transaction history   | transaction delete
+<img src="/3.Expense_Tracker/image/expense_history.PNG">| <img src="/3.Expense_Tracker/image/expense_delete.PNG">
+
+
