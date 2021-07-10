@@ -2,6 +2,7 @@ const transactionText = document.getElementById("name");        //'text' input �
 const transactionAmount = document.getElementById("amount");    //'amount' input 값
 const addTransactionBtn = document.getElementById("add-btn");   // 'add transaction' button
 const transactionHistory = document.querySelector(".history");  // history를 보여주는 <ul>
+const deleteBtn = document.querySelector(".delete-btn");        // history 목록 삭제 버튼
 
 const balance = document.getElementById("total-balance");       // 총 금액
 const incTrace = document.getElementById("inc-trace");          // 입금 금액
@@ -36,6 +37,7 @@ function getTrackerInfo(event) {
     };
 
     transactions.push(transaction);
+    console.log(transactions);
 
     updateValues();
 
@@ -50,19 +52,26 @@ function getTrackerInfo(event) {
 
 // 총 금액(total-balance), Trace의 값을 업데이트
 function updateValues() {
-    let trimBalance = balance.innerText.substring(1, balance.innerHTML.length - 1);
-    let updateBalance = (parseFloat(trimBalance) + parseFloat(amount.value)).toFixed(2);
-    balance.innerText = `$${updateBalance}`;
 
-    if (amount.value > 0) {
-        let trimIncTrace = incTrace.innerText.substring(1, incTrace.innerHTML.length - 1);
-        let updateIncTrace = (parseFloat(trimIncTrace) + parseFloat(amount.value)).toFixed(2);
-        incTrace.innerText = `$${updateIncTrace}`;
-    } else {
-        let trimExpTrace = expTrace.innerText.substring(1, expTrace.innerHTML.length - 1);
-        let updateExpTrace = (parseFloat(trimExpTrace) - parseFloat(amount.value)).toFixed(2);
-        expTrace.innerText = `$${updateExpTrace}`;
+    let updateBalance = 0;
+    let updateIncTrace = 0;
+    let updateExpTrace = 0;
+
+    for (let i = 0; i < transactions.length; i++) {
+        let value = transactions[i].amount;
+        updateBalance += parseFloat(value);
+        console.log(transactions[i].amount, updateBalance.toFixed(2));
+
+        if (value > 0) {
+            updateIncTrace += parseFloat(value);
+        }
+        else {
+            updateExpTrace += parseFloat(value);
+        }
     }
+    balance.innerText = `$${updateBalance.toFixed(2)}`;
+    incTrace.innerText = `$${updateIncTrace.toFixed(2)}`;
+    expTrace.innerText = `-$${(updateExpTrace * -1).toFixed(2)}`;
 }
 
 // DOM에 새로운 history 목록을 추가
@@ -72,8 +81,18 @@ function printTrackerHistory(transaction) {
 
     li.classList.add(transaction.amount < 0 ? 'minus' : 'plus');
     li.innerHTML = `${transaction.text}
-                        <span>${sign}${Math.abs(transaction.amount)}</span> <button class="delete-btn">x</button>`;
+                        <span>${sign}${Math.abs(transaction.amount)}</span> <button class="delete-btn"
+                        onclick="deleteTrackerHistory(${transaction.id})">x</button>`;
     transactionHistory.appendChild(li);
+}
+
+// history 목록을 삭제
+function deleteTrackerHistory(id) {
+    transactions = transactions.filter(value => value.id !== id);
+
+    updateLocalStorage();
+
+    init();
 }
 
 // localStorage에 추가된 정보를 업데이트
@@ -87,9 +106,10 @@ function init() {
 
     transactions.forEach(printTrackerHistory);
 
-    // updateValues();
+    updateValues();
 }
 
 init();
 
 addTransactionBtn.addEventListener("click", getTrackerInfo);
+
