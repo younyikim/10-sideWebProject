@@ -28,6 +28,7 @@ function playMusic() {
     musicContainer.classList.add("play");
     playBtn.childNodes[1].classList.replace("fa-play", "fa-pause");
     audio.play();
+    progressing();
 }
 
 // 음악 재생 정지
@@ -62,7 +63,24 @@ function moveNextMusic() {
     playMusic();
 }
 
+function progressing() {
+    const duration = audio.duration; // 총 시간
+    const currentTime = audio.currentTime;
+
+    progressBar.style.width = (currentTime + .25) / duration * 100 + "%";
+}
+
+function progressMoveByControll(event) {
+    let x = event.pageX - this.offsetLeft;
+    let startPos = progressContainer.position;
+
+    progressBar.style.width = (event.offsetX / this.offSetWidth) * 100 + "%";
+}
+
 loadMusic(songIdx);
+
+progressContainer.addEventListener("click", progressMoveByControll);
+audio.addEventListener("timeupdate", progressing);
 
 prevBtn.addEventListener("click", movePrevMusic);
 forwardBtn.addEventListener("click", moveNextMusic);
