@@ -41,7 +41,27 @@ body {
     height: 110px;
     left: 0;
     bottom: 0;
+
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+    animation-play-state: paused;
 }
+
+.music-player-container.play .image-container img {
+    animation-play-state: running;
+}
+
+@-moz-keyframes spin {
+     100% { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin {
+     100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } 
+}
+
 
 .image-container::after {
     content: '';
@@ -81,7 +101,7 @@ body {
 }
 
 .music-controll:focus {
-    color: #999999;
+    outline: 0;
 }
 
 .music-detail {
