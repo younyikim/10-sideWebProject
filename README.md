@@ -60,4 +60,17 @@ expense tracker main       |  transaction add
 transaction history   | transaction delete
 <img src="/3.Expense_Tracker/image/expense_history.PNG">| <img src="/3.Expense_Tracker/image/expense_delete.PNG">
 
+----------------------------------------------------           
+## 4.  Music Player     
+* audio API 사용
+* 회전하는 이미지와 음악 설명(제목, 재생시간) 팝업 UI 
+* 음악 재생 및 음악 선택
+* Progress bar
+
+music player main       |  music player play
+:-------------------------:|:-------------------------:
+<img src="/4.Music_Player/image/music_player_main.PNG"> |<img src="/4.Music_Player/image/music_player_play.PNG">
+music player   | 
+<img src="/4.Music_Player/image/ezgif.com-gif-maker.gif">|
+
 
