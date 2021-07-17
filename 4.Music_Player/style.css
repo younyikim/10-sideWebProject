@@ -92,6 +92,7 @@ body {
     padding: 10px;
     margin: 0 10px;
     cursor: pointer;
+    z-index: 1;
 }
 
 .music-controll.music-controll-lg {
@@ -114,9 +115,9 @@ body {
     top: 0;
     left: 20px;
     width: calc(100% - 40px);
-    transform: translateY(-100%);
+    transform: translateY(0%);
     transition: transform 0.3s ease-in, opacity 0.3s ease-in;
-    opacity: 1;
+    opacity: 0;
     z-index: 0;
 }
 
@@ -127,6 +128,10 @@ body {
 
 .music-detail h4 { 
     margin-left: 12rem;
+}
+
+.music-detail h5 { 
+    margin-left: 30rem;
 }
 
 .progress-container {
