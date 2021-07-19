@@ -14,7 +14,7 @@
 |2. Meal Finder|[Live Demo](https://younyikim.github.io/10-sideWebProject/2.Meal_Finder/index.html)|
 |3. Expense Tracker|[Live Demo](https://younyikim.github.io/10-sideWebProject/3.Expense_Tracker/index.html)|
 |4. Music Player|[Live Demo](https://younyikim.github.io/10-sideWebProject/4.Music_Player/index.html)|
-|5. Infinite Scroll||
+|5. Infinite Scroll|[Live Demo](https://younyikim.github.io/10-sideWebProject/5.Infinite_Scrolling/index.html)|
 |6. Typing Game||
 |7. Memory Cards||
 |8. Relaxer||
