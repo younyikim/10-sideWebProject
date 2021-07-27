@@ -75,3 +75,13 @@ const io = new IntersectionObserver((entries, observer) => {}, options);
   * `observe()`  : 타겟 element에 대한 observer를 등록할 때(관찰을 시작할 때) 
   * `unobserve()` : 타겟 element에 대한 observer 등록을 해제
   * `disconnect()` : 여러개의 element를 관찰하고 있을 때, 이에 대한 모든 관찰을 해제할 때
+
+
+---------------------------------------------
+### Reference
+[바닐라 JS로 무한스크롤 구현을 위한 베이직 공부](https://velog.io/@dev-tinkerbell/%EB%AC%B4%ED%95%9C%EC%8A%A4%ED%81%AC%EB%A1%A4-%EA%B5%AC%ED%98%84%EB%B0%A9%EB%B2%95)     
+
+[Menu
+Intersection Observer API의 사용법과 활용방법](http://blog.hyeyoonjung.com/2019/01/09/intersectionobserver-tutorial/)      
+
+[Intersection Observer API](https://developer.mozilla.org/ko/docs/Web/API/Intersection_Observer_API)
