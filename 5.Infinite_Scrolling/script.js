@@ -65,13 +65,37 @@ function searchPost(event) {
 }
 
 window.addEventListener('scroll', function () {
-    let scrollLocation = document.documentElement.scrollTop;
-    let windowHeight = window.innerHeight;
-    let fullHeight = document.body.scrollHeight;
+    // let scrollLocation = document.documentElement.scrollTop;
+    // let windowHeight = window.innerHeight;
+    // let fullHeight = document.body.scrollHeight;
 
-    if (scrollLocation + windowHeight >= fullHeight) {
-        loadPosts();
-    }
+    // if (scrollLocation + windowHeight >= fullHeight) {
+    //     loadPosts();
+    // }
+
+    const postDiv = blogContent.lastChild;
+    const post = document.querySelectorAll('.post');
+    console.log(post.length);
+    console.log(postDiv);
+
+    // console.log(post.length);
+
+    const io = new IntersectionObserver((entry, observer) => {
+
+        const ioTarget = entry[0].target;
+        console.log('ioTarget', ioTarget);
+
+        if (entry[0].isIntersecting) {
+            console.log('현재 보이는 타겟', ioTarget);
+
+            loadPosts();
+            io.unobserve(postDiv);
+        }
+    }, {
+        threshold: 1.0
+    });
+
+    io.observe(postDiv);
 });
 
 showPosts();
