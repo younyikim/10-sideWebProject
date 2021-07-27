@@ -73,4 +73,18 @@ music player main       |  music player play
 music player   | 
 <img src="/4.Music_Player/image/ezgif.com-gif-maker.gif">|
 
+----------------------------------------------------           
+## 5. Infinite Scroll   
+* JSONPlaceholder API 사용
+* Scroll 이벤트를 사용한 무한 스크롤
+* CSS loader 애니메이션 사용
+* fetch API 사용 및 fetch 된 포스트 검색 기능
+
+infinite scroll main       |  infinite scroll play
+:-------------------------:|:-------------------------:
+<img src="/5.Infinite_Scrolling/image/infinite_main.PNG"> |<img src="/5.Infinite_Scrolling/image/infinite_loading.PNG">
+infinite scroll search   | 
+<img src="/5.Infinite_Scrolling/image/infinite_search.PNG">|
+
+
 
