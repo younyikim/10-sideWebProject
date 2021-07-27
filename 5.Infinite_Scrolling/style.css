@@ -38,7 +38,7 @@ input[type="text"] {
     font-size: 16px;
 }
 
-.blog-content {
+.post {
     display: flex;
     position: relative;
     background-color: #4992d3;
@@ -50,6 +50,7 @@ input[type="text"] {
     width: 80vw;
     max-width: 800px;
 }
+
 
 .blog-content .number {
     position: absolute;
@@ -67,3 +68,42 @@ input[type="text"] {
     font-weight: 700;
     padding: 7px 10px;
 }
+
+.loader {
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.loader.show {
+    opacity: 1;
+}
+.circle {
+    position: relative;
+    top: -15px;
+    left: -15px;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    margin: 0.5rem;
+    animation: bounce .3s ease-in infinite alternate;
+}
+
+.loader div:nth-child(2) {
+    animation-delay: .1s;
+
+}
+.loader div:nth-child(3) {
+    animation-delay: .2s;
+}
+
+
+@keyframes bounce {
+    100% {
+      top: -20px;
+    }
+  }
