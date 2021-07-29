@@ -64,38 +64,39 @@ function searchPost(event) {
     });
 }
 
-window.addEventListener('scroll', function () {
-    // let scrollLocation = document.documentElement.scrollTop;
-    // let windowHeight = window.innerHeight;
-    // let fullHeight = document.body.scrollHeight;
+/*
+    Scroll Event를 사용한, Infinite Scroll
+*/
+//window.addEventListener('scroll', function () {
+// let scrollLocation = document.documentElement.scrollTop;
+// let windowHeight = window.innerHeight;
+// let fullHeight = document.body.scrollHeight;
 
-    // if (scrollLocation + windowHeight >= fullHeight) {
-    //     loadPosts();
-    // }
+// if (scrollLocation + windowHeight >= fullHeight) {
+//     loadPosts();
+// }
+// });
 
-    const postDiv = blogContent.lastChild;
-    const post = document.querySelectorAll('.post');
-    console.log(post.length);
-    console.log(postDiv);
 
-    // console.log(post.length);
+/*
+    Intersection Observer를 사용한, Infinite Scroll
+*/
+document.addEventListener("DOMContentLoaded", () => {
+    let options = {
+        root: null, // 브라우저의 viewport
+        rootMargin: "0px",
+        threshold: 0.25 // 타겟 엘리먼트에 대한 교차 영역 비율
+    };
 
-    const io = new IntersectionObserver((entry, observer) => {
-
-        const ioTarget = entry[0].target;
-        console.log('ioTarget', ioTarget);
-
-        if (entry[0].isIntersecting) {
-            console.log('현재 보이는 타겟', ioTarget);
-
-            loadPosts();
-            io.unobserve(postDiv);
-        }
-    }, {
-        threshold: 1.0
-    });
-
-    io.observe(postDiv);
+    function handleIntersect(entries, observer) {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) { // loader element가 observer가 감시하고 있는 교차 영역에 들어오는 경우.
+                loadPosts();
+            }
+        });
+    }
+    let observer = new IntersectionObserver(handleIntersect, options);
+    observer.observe(loader); // loader에 observer를 등록한다.
 });
 
 showPosts();
