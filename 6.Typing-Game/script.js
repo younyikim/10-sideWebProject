@@ -6,6 +6,7 @@ const word = document.getElementById("word");
 const time = document.getElementById("time");
 const score = document.getElementById("score");
 const input = document.getElementById("typing");
+const result = document.querySelector(".end-game-container");
 
 // List of words for game
 const wordsEasy = [
@@ -78,6 +79,9 @@ const wordsHard = [
 let randomWord;
 let gameScore = 0;
 
+let count = 10;
+let counter = setInterval(setTime, 1000);
+
 let difficulty = localStorage.getItem('difficulty') !== null ? localStorage.getItem('difficulty') : 'medium';
 
 difficultySelect.value = localStorage.getItem('difficulty') !== null ? localStorage.getItem('difficulty') : 'medium';
@@ -112,6 +116,29 @@ function selectWord(words) {
     return words[Math.floor(Math.random() * words.length)];
 }
 
+// 게임 종료시, 최종 점수를 보여준다.
+function showResult() {
+    result.style.display = "flex";
+    result.innerHTML = `
+        <h1>Time ran out</h1>
+        <p class="end-game-info">Your final Score is <span id="finalScore">${gameScore}</span></p>
+        <button onclick="location.reload()">Reload</button>
+    `;
+}
+
+// 타이머
+function setTime() {
+    count--;
+
+    if (count <= 0) {
+        clearInterval(counter);
+        showResult();
+        return;
+    }
+
+    time.innerHTML = count + 's';
+}
+
 addWordToDOM();
 
 
@@ -125,6 +152,9 @@ input.addEventListener('input', (e) => {
         addWordToDOM();
         updateScore();
         e.target.value = '';
+
+        count += 3;
+        setTime();
     }
 });
 
