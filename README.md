@@ -86,5 +86,19 @@ infinite scroll main       |  infinite scroll play
 infinite scroll search   | 
 <img src="/5.Infinite_Scrolling/image/infinite_search.PNG">|
 
+----------------------------------------------------           
+## 6. Typing Game
+* 난이도 설정을 포함한 UI 개발
+* Random하게 단어를 선택하고 DOM에 출력
+* input event를 사용하여, typing game 점수 계산
+* 타이머 사용
+* localStorage 를 사용한 난이도 저장
+
+typing game main       | typing game setting
+:-------------------------:|:-------------------------:
+<img src="/6.Typing-Game/image/typing-game-main.PNG"> |<img src="/6.Typing-Game/image/typing-game-setting.PNG">
+typing game result | 
+<img src="/6.Typing-Game/image/typing-game-result.PNG">|
+
 
 
