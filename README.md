@@ -76,7 +76,7 @@ music player   |
 ----------------------------------------------------           
 ## 5. Infinite Scroll   
 * JSONPlaceholder API 사용
-* Scroll 이벤트를 사용한 무한 스크롤
+* Scroll 이벤트를 사용한 무한 스크롤 + Intersection Observer를 사용한 무한 
 * CSS loader 애니메이션 사용
 * fetch API 사용 및 fetch 된 포스트 검색 기능
 
