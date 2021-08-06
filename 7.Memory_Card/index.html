@@ -17,13 +17,16 @@
         <button id="show" class="btn btn-small"><i class="fas fa-plus"></i>Add New Card</button>
     </h1>
 
+    <!-- 카드 플립 버튼 클릭시, 이벤트 버벅거림을 막기 위한 클릭 감지용 부모 div -->
     <div id="cards-container" class="cards">
-        <div class="card">
+        <div class="card active">
             <div class="inner-card">
+                <!-- 카드 앞면 -->
                 <div class="inner-card-front">
                     <p>What is PHP?</p>
                 </div>
-                <div class="inner-card-rear">
+                <!-- 카드 뒷면 -->
+                <div class="inner-card-back">
                     <p>A programming language.</p>
                 </div>
             </div>
