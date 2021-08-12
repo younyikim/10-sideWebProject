@@ -16,7 +16,7 @@
 |4. Music Player|[Live Demo](https://younyikim.github.io/10-sideWebProject/4.Music_Player/index.html)|
 |5. Infinite Scroll|[Live Demo](https://younyikim.github.io/10-sideWebProject/5.Infinite_Scrolling/index.html)|
 |6. Typing Game|[Live Demo](https://younyikim.github.io/10-sideWebProject/6.Typing-Game/index.html)|
-|7. Memory Cards|[Live Demo](https://younyikim.github.io/10-sideWebProject/7.Memory_Card/index.html)|
+|7. Memory Cards||
 |8. Relaxer||
 |9. New Year CountDown||
 |10. Sortable List||
