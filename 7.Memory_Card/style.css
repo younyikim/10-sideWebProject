@@ -10,6 +10,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    margin: 0;
 }
 
 
@@ -32,22 +33,23 @@ h1 button:hover {
 
 /* cards */
 .cards {
-    perspective: 1000px; /*원근감을 주는 속성, transform과 같이 사용해야하고, 바로 아래의 자식 요소에만 적용된다.*/
-    position: relative;
-    height: 300px;
+    perspective: 1000px;
     width: 500px;
+    height: 300px;
+    position: relative;
     max-width: 100%;
 }
-
+  
 .card {
     opacity: 0;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     height: 100%;
+    width: 100%;
+    font-size: 1.5em;
     transform: translate(50%) rotateY(-10deg);
-    transition: transform 0.4s ease, opacity 0.4s ease+;
+    transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
 .card.active {
@@ -58,16 +60,16 @@ h1 button:hover {
 }
 
 .card.left {
-    transform: translateX(-50%) rotateY(10deg);
+    transform: translate(-50%) rotateY(10deg);
 }
 
 .inner-card {
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
-    border-radius: 4px;
-    height: 100%;
-    width: 100%;
     position: relative;
     transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
     transition: transform 0.4s ease;
 }
 
@@ -93,7 +95,7 @@ h1 button:hover {
     transform: rotateX(0deg);
     z-index: 2;
 }
-  
+
 .inner-card-back {
     transform: rotateX(180deg);
 }
@@ -110,7 +112,6 @@ h1 button:hover {
   color: #ddd;
 }
 
-  
 /* navigation */
 .navigation-container {
     display: flex;
@@ -137,7 +138,7 @@ h1 button:hover {
 
 /* add-card-container */
 .add-card-container {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
