@@ -228,13 +228,13 @@ header {
 
 .showcase-modal-content li > a{
     font-weight: 800;
-    font-size: 1.5rem;
+    font-size: 1.0rem;
 }
 
 .showcase-modal-category {
     color: #000;
     text-decoration: none;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .showcase-modal-category:hover {
@@ -268,18 +268,19 @@ h4 {
 
 /* Text Style */
 .text-xl {
-    font-size: 3.3rem;
+    font-size: 2.8rem;
     margin-bottom: 1rem;
 }
 
 .text-lg {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 1rem;
 }
 
 .text-md {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 1rem;
+    padding : 0 10px;
 }
 
 /* Button */
@@ -297,6 +298,7 @@ h4 {
     box-shadow: 0 1px 0 rgba(0,0,0,0.45);
     border-radius: 2px;
 }
+
 
 .btn:hover {
     opacity: 0.8;
@@ -418,7 +420,7 @@ h4 {
 
     /* showcase modal */
     .showcase-modal-content {
-        margin: 30% auto;
+        /* margin: 30% auto; */
         width: 85%;
         height: 90%;
     }
@@ -430,7 +432,7 @@ h4 {
 
     .showcase-modal-content img{
         width: 100%;
-        height: 100%;
+        height: 90%;
     }
 
     .showcase-modal-content p {
@@ -447,7 +449,7 @@ h4 {
     }
 
     .showcase-modal-content li > a{
-        font-size: 0.8rem;
+        font-size: 1.0rem;
     }
 
     #showcase-modal-portfolio-btn, #showcase-modal-code-btn {
@@ -459,12 +461,12 @@ h4 {
 
     /* Text Style */
     .text-xl {
-        font-size: 2.5rem;
+        font-size: 2.0rem;
         margin-bottom: 1rem;
     }
 
     .text-lg {
-        font-size: 1.8rem;
+        font-size: 1.3rem;
         margin-bottom: 1rem;
     }
 
@@ -580,7 +582,7 @@ h4 {
     
     .showcase-modal-background {
         height: 35%;
-        width: 95%;
+        width: 80%;
     }
     .showcase-modal-content img{
         width: 100%;
@@ -611,9 +613,10 @@ h4 {
         width: 8rem;
     }
 
+    
     /* Text Style */
     .text-xl {
-        font-size: 2.5rem;
+        font-size: 2.0rem;
         margin-bottom: 1rem;
     }
 
