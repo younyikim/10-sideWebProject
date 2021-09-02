@@ -109,11 +109,7 @@ typing game result |
 * 전체 카드를 삭제하는 clear 버튼
 
 
-typing game main       | typing game setting
+Memory Card Main    | Card Add form
 :-------------------------:|:-------------------------:
-<img src="/6.Typing-Game/image/typing-game-main.PNG"> |<img src="/6.Typing-Game/image/typing-game-setting.PNG">
-typing game result | 
-<img src="/6.Typing-Game/image/typing-game-result.PNG">|
-
-
+<img src="/7.Memory_Card/image/memory-card-main.PNG"> |<img src="/7.Memory_Card/image/memory-card-add.PNG">
 
