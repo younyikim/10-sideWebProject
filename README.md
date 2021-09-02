@@ -16,7 +16,7 @@
 |4. Music Player|[Live Demo](https://younyikim.github.io/10-sideWebProject/4.Music_Player/index.html)|
 |5. Infinite Scroll|[Live Demo](https://younyikim.github.io/10-sideWebProject/5.Infinite_Scrolling/index.html)|
 |6. Typing Game|[Live Demo](https://younyikim.github.io/10-sideWebProject/6.Typing-Game/index.html)|
-|7. Memory Cards||
+|7. Memory Cards|[Live Demo](https://younyikim.github.io/10-sideWebProject/7.Memory_Card/index.html)|
 |8. Relaxer||
 |9. New Year CountDown||
 |10. Sortable List||
@@ -93,6 +93,21 @@ infinite scroll search   |
 * input event를 사용하여, typing game 점수 계산
 * 타이머 사용
 * localStorage 를 사용한 난이도 저장
+
+typing game main       | typing game setting
+:-------------------------:|:-------------------------:
+<img src="/6.Typing-Game/image/typing-game-main.PNG"> |<img src="/6.Typing-Game/image/typing-game-setting.PNG">
+typing game result | 
+<img src="/6.Typing-Game/image/typing-game-result.PNG">|
+
+----------------------------------------------------           
+## 7. Memory Card
+* CSS를 이용한 card flip 애니메이션
+* "Add new card" 폼을 overlay로 구현
+* 이전 카드, 다음 카드 버튼
+* local Storage를 사용한 새로운 카드 추가
+* 전체 카드를 삭제하는 clear 버튼
+
 
 typing game main       | typing game setting
 :-------------------------:|:-------------------------:
