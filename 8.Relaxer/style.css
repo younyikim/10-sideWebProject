@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    margin : 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height : 100vh;
+    background: url('./image/relax-background.jpg') no-repeat center center/cover;
+    color: #fff;
+}
+
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(34, 34, 34, 0.6);
+   
+}
+
+.container {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    margin: auto;
+}
+
+.circle {
+    position: relative;
+    /* border: 10px solid #ff2079b2; */
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #010f1c;
+    z-index: -1;
+}
+
+.gradient-circle {
+    background: conic-gradient(
+      #55b7a4 0%,
+      #4ca493 40%,
+      #fff 40%,
+      #fff 60%,
+      #336d62 60%,
+      #2a5b52 100%
+    );
+    height: 320px;
+    width: 320px;
+    z-index: -2;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+  }
+
+.pointer-container {
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    transform: translate(-50%);
+    animation: rotate 3s ease-in-out infinite;
+}
+
+.pointer {
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    display: block;
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+h1 {
+    z-index: 2;
+    font-size: 40px;
+}
+
+@keyframes rotate {
+    from {
+        transform: translate(-50%) rotate(0deg);
+      }
+    
+      to {
+        transform: translate(-50%) rotate(360deg);
+      }
+}

@@ -1,0 +1,38 @@
+.doughnut {
+    background-color: #000;
+    display: block;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    border: 10px solid #FF6188;
+    border-top: 10px solid #A9DC62;
+    border-left: 10px solid #78DCDC;
+    border-right: 10px solid #FFD862;
+    transform: translate(-50%, -50%) rotate(25deg);
+    animation: loading 1s ease-in-out ;
+    box-shadow: inset 0 0 10px 0px #21212191, 0 0 0 2px #212121;
+}
+
+.doughnut-2 {
+    background-color: #000;
+    display: block;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 48%;
+    left: 30%;
+    transform: translate(-40%, -30%); 
+    border-radius: 50%;
+    border: 10px solid #FF6188;
+    border-top: 10px solid #A9DC62;
+    border-left: 10px solid #78DCDC;
+}
+
+@keyframes loading {
+    0% { transform : translate(-50%, -50%) rotate(25deg);}
+    100% { transform : translate(-50%, -50%) rotate(385deg);}
+}
