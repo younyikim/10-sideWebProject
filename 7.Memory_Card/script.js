@@ -10,7 +10,7 @@ const addCardBtn = document.getElementById("add-card");
 const clearBtn = document.getElementById("btn-clear");
 const addContainer = document.getElementById("add-card-container");
 
-let currentActiveCard = 1;
+let currentActiveCard = 0;
 
 const cardsEl = [];
 
@@ -56,7 +56,7 @@ function createCard(data, index) {
 
 // Card의 개수와 현재 카드의 번호를 보여준다.
 function updateCurrentActiveText() {
-   currentEl.innerText = `${currentActiveCard} / ${cardsEl.length}`;
+   currentEl.innerText = `${currentActiveCard + 1} / ${cardsEl.length}`;
 }
 
 // localstorage에서 card data를 가져온다.
@@ -74,6 +74,37 @@ function setCardsData(cards) {
 createCards();
 
 // Event Listener
+
+// next button
+nextBtn.addEventListener('click', () => {
+   cardsEl[currentActiveCard].className = 'card left';
+
+   currentActiveCard = currentActiveCard + 1;
+
+   if (currentActiveCard > cardsEl.length - 1) {
+      currentActiveCard = cardsEl.length - 1;
+   }
+
+   cardsEl[currentActiveCard].className = 'card active';
+
+   updateCurrentActiveText();
+});
+
+// prev button
+prevBtn.addEventListener('click', () => {
+   cardsEl[currentActiveCard].className = 'card right';
+
+   currentActiveCard = currentActiveCard - 1;
+
+   if (currentActiveCard < 0) {
+      currentActiveCard = 0;
+   }
+
+   cardsEl[currentActiveCard].className = 'card active';
+
+   updateCurrentActiveText();
+});
+
 showBtn.addEventListener('click', () => addContainer.classList.add('show'));
 closeBtn.addEventListener('click', () => addContainer.classList.remove('show'));
 
@@ -93,3 +124,10 @@ addCardBtn.addEventListener('click', () => {
       setCardsData(cardsData);
    }
 });
+
+// Clear cards button
+clearBtn.addEventListener('click', () => {
+   localStorage.clear();
+   cardsContainer.innerHTML = '';
+   window.location.reload();
+})
