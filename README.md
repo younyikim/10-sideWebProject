@@ -17,7 +17,7 @@
 |5. Infinite Scroll|[Live Demo](https://younyikim.github.io/10-sideWebProject/5.Infinite_Scrolling/index.html)|
 |6. Typing Game|[Live Demo](https://younyikim.github.io/10-sideWebProject/6.Typing-Game/index.html)|
 |7. Memory Cards|[Live Demo](https://younyikim.github.io/10-sideWebProject/7.Memory_Card/index.html)|
-|8. Relaxer||
+|8. Relaxer|[Live Demo](https://github.com/younyikim/10-sideWebProject//8.Relaxer/index.html)|
 |9. New Year CountDown||
 |10. Sortable List||
 
@@ -112,4 +112,15 @@ typing game result |
 Memory Card Main    | Card Add form
 :-------------------------:|:-------------------------:
 <img src="/7.Memory_Card/image/memory-card-main.PNG"> |<img src="/7.Memory_Card/image/memory-card-add.PNG">
+
+----------------------------------------------------           
+## 8. Relaxer App
+* CSS를 이용한 gradient circle, animation pointer
+* grow & shrink animation
+* JS를 이용한 숨쉬기 animation 효과
+
+
+Relaxer    | 
+:-------------------------:|
+<img src="/8.Relaxer/image/relaxer.gif> |
 
