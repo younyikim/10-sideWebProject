@@ -14,7 +14,6 @@ body{
     color: #fff;
 }
 
-
 body::after {
     content: '';
     position: absolute;
@@ -22,87 +21,102 @@ body::after {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -10;
     background: rgba(34, 34, 34, 0.6);
-   
 }
 
 .container {
-    position: relative;
-    height: 300px;
-    width: 300px;
+    border: 3px solid #fff;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 2;
+    width: 400px;
+    height: 400px;
+    position: relative;
     margin: auto;
 }
 
 .circle {
-    position: relative;
-    /* border: 10px solid #ff2079b2; */
-    border-radius: 50%;
-    top: 0;
-    left: 0;
+    border: 3px solid #fff;
+    background-color: #010f1c;
     width: 100%;
     height: 100%;
-    background-color: #010f1c;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
     z-index: -1;
 }
 
 .gradient-circle {
     background: conic-gradient(
-      #55b7a4 0%,
-      #4ca493 40%,
-      #fff 40%,
-      #fff 60%,
-      #336d62 60%,
-      #2a5b52 100%
-    );
-    height: 320px;
-    width: 320px;
+        #55b7a4 0%,
+        #4ca493 40%,
+        #fff 40%,
+        #fff 60%,
+        #336d62 60%,
+        #2a5b52 100%
+      );
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    position: absolute;
     z-index: -2;
-    border-radius: 50%;
-    position: absolute;
-    top: -10px;
-    left: -10px;
-  }
-
-.pointer-container {
-    position: absolute;
-    border-radius: 50%;
-    top: 0;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    background-color: inherit;
-    transform: translate(-50%);
-    animation: rotate 3s ease-in-out infinite;
 }
 
 .pointer {
-    position: absolute;
-    top: -20%;
-    left: 50%;
-    display: block;
     background-color: #fff;
-    width: 20px;
-    height: 20px;
     border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    display: block;
 }
 
-h1 {
-    z-index: 2;
-    font-size: 40px;
+.pointer-container {
+    border: 1px solid #df2020;
+    position: absolute;
+    top: -40px;
+    left: 185px;
+    width: 20px;
+    height: 240px;
+    animation: rotate 5s linear forwards infinite;
+    transform-origin: bottom center;
+}
+
+.container.grow {
+    animation: grwo 3s linear forwards;
+}
+
+.container.shrink {
+    animation: shrink 3s linear forwards;
 }
 
 @keyframes rotate {
     from {
-        transform: translate(-50%) rotate(0deg);
-      }
-    
-      to {
-        transform: translate(-50%) rotate(360deg);
-      }
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes grow {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes shrink {
+    from {
+        transform: scale(1.2);
+    }
+
+    to {
+        transform: scale(1);
+    }
 }
