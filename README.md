@@ -122,5 +122,4 @@ Memory Card Main    | Card Add form
 
 Relaxer    | 
 :-------------------------:|
-<img src="/8.Relaxer/image/relaxer.gif> |
-
+<img src="/8.Relaxer/image/relaxer.gif"> |
