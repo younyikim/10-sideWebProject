@@ -20,7 +20,7 @@
 |6. Typing Game|[Live Demo](https://younyikim.github.io/10-sideWebProject/6.Typing-Game/index.html)|
 |7. Memory Cards|[Live Demo](https://younyikim.github.io/10-sideWebProject/7.Memory_Card/index.html)|
 |8. Relaxer|[Live Demo](https://github.com/younyikim/10-sideWebProject//8.Relaxer/index.html)|
-|9. New Year CountDown||
+|9. New Year CountDown|[Live Demo](https://github.com/younyikim/10-sideWebProject/9.New_Year_Countdown)|
 |10. Sortable List||
 
 ----------------------------------------------------               
@@ -125,3 +125,13 @@ Memory Card Main    | Card Add form
 Relaxer    | 
 :-------------------------:|
 <img src="/8.Relaxer/image/relaxer.gif"> |
+
+----------------------------------------------------           
+## 9. New Year Countdown
+* 새해까지의 일,시,분,초를 계산하여 보여준다.
+* HTML,CSS를 이용한 landing page
+* background에 내년의 날짜를 계산하여 보여준다.
+
+New Year Countdown    | 
+:-------------------------:|
+<img src="/9.New_Year_Countdown/image/result.gif"> |
