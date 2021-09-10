@@ -21,9 +21,9 @@ function newYearCountdown(intervalId) {
     const sec = Math.floor(time / 1000) % 60;
 
     days.innerHTML = day;
-    hours.innerHTML = hour > 10 ? hour : '0' + hour;
-    minutes.innerHTML = min > 10 ? min : '0' + min;
-    seconds.innerHTML = sec > 10 ? sec : '0' + sec;
+    hours.innerHTML = hour >= 10 ? hour : '0' + hour;
+    minutes.innerHTML = min >= 10 ? min : '0' + min;
+    seconds.innerHTML = sec >= 10 ? sec : '0' + sec;
 }
 
 // 1초마다 countdown 함수 실행
