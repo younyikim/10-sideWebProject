@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin : 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height : 100vh;
+    font-family: 'Noto Sans', sans-serif;
+    background: url('./image/background.jpg') no-repeat center center/cover;
+    color: #fff;
+    z-index: 1;
+}
+
+body::after {
+    content: '';
+    position:absolute;
+    left:0;
+    top:0;
+    display:block; 
+    width:100%; 
+    height:100%;
+    background:rgba(0,0,0,0.5); 
+    z-index: 2;
+}
+.container {
+    /* border: 3px solid red; */
+    position: absolute;
+    top: 50;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    z-index: 10;
+}
+
+.counter-container {
+    /* border: 3px solid dodgerblue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.counter-container span {
+    text-align: center;
+    padding: 40px;
+    font-size: 3.5rem;
+}
+.counter-container p{
+    font-size: 1.8rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+#year {
+    position: absolute;
+    bottom: 10px;
+    font-size: 200px;
+    color: rgba(255, 255, 255, 0.315);
+    z-index: 10;
+}
