@@ -20,7 +20,7 @@
 |6. Typing Game|[Live Demo](https://younyikim.github.io/10-sideWebProject/6.Typing-Game/index.html)|
 |7. Memory Cards|[Live Demo](https://younyikim.github.io/10-sideWebProject/7.Memory_Card/index.html)|
 |8. Relaxer|[Live Demo](https://github.com/younyikim/10-sideWebProject//8.Relaxer/index.html)|
-|9. New Year CountDown|[Live Demo](https://github.com/younyikim/10-sideWebProject/9.New_Year_Countdown/index.html)|
+|9. New Year CountDown|[Live Demo](https://github.com/younyikim/10-sideWebProject/9.New_Year_Countdown/)|
 |10. Sortable List||
 
 ----------------------------------------------------               
