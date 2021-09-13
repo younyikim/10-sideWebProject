@@ -21,7 +21,7 @@
 |7. Memory Cards|[Live Demo](https://younyikim.github.io/10-sideWebProject/7.Memory_Card/index.html)|
 |8. Relaxer|[Live Demo](https://younyikim.github.io/10-sideWebProject//8.Relaxer/index.html)|
 |9. New Year CountDown|[Live Demo](https://younyikim.github.io/10-sideWebProject/9.New_Year_Countdown/index.html)|
-|10. Sortable List||
+|10. Sortable List(진행중📌)|[Live Demo](https://younyikim.github.io/10-sideWebProject/9.Sortable_List/index.html)|
 
 ----------------------------------------------------               
 ## 1. Menu Slider & Modal            
